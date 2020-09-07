@@ -1,4 +1,4 @@
-# React starter app
+# My app
 
 ## Develop
 
