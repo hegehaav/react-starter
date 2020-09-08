@@ -39,7 +39,7 @@ fse.writeJsonSync(`./${appname}/package.json`, {
     ...packageJson,
 });
 
-const indexHtml = fse.readFileSync(`./${appname}/index.html`, 'utf-8');
+const indexHtml = fse.readFileSync(`./${appname}/src/index.html`, 'utf-8');
 const interpolatedHtml = indexHtml.replace(/{{appName}}/g, appname);
 fse.writeFileSync(`./${appname}/index.html`, interpolatedHtml, 'utf-8');
 
