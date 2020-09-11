@@ -26,6 +26,31 @@ module.exports = {
                     presets: ['@babel/preset-env', '@babel/preset-react'],
                 },
             },
+            {
+                test: /\.css$/,
+                // style loader inserts css into place
+                // css loader returns css with imports and url(...) tresolved via webpack's require functionality
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: 'svg-url-loader',
+                        options: {
+                            limit: 10000,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
         ],
     },
     // add a custom index.html as the template
