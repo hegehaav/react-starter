@@ -53,6 +53,10 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        modules: [path.resolve('./src'), path.resolve('./node_modules')],
+        extensions: ['*', '.js', '.jsx'],
+    },
     // add a custom index.html as the template
     plugins: [
         new HtmlWebpackPlugin({
