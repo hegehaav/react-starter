@@ -11,6 +11,8 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         // the filename of the JS bundle will be bundle.js
         filename: 'bundle.js',
+        // specify the base path for all assets within the application
+        publicPath: '/',
     },
     module: {
         rules: [
