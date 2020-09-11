@@ -65,4 +65,8 @@ module.exports = {
             template: path.resolve(__dirname, 'src', 'index.html'),
         }),
     ],
+    // Server fallbacks to index.html in the event that a requested resource cannot be found
+    devServer: {
+        historyApiFallback: true,
+    },
 };
